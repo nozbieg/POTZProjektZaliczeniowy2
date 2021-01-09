@@ -172,34 +172,41 @@ namespace POTZProjektZaliczeniowy
 
         private void btnEditRecord_Click(object sender, EventArgs e)
         {
-            if(mainTabControl.SelectedTab.Name == "CompaniesPage")
+            if (mainTabControl.SelectedTab.Name == "CompaniesPage")
             {
-                Company selectedCompany;
-                using (CompanyContext dbContext = new CompanyContext())
+                if (this.companiesGridView.CurrentRow != null)
                 {
-                    var companyToEdit = Convert.ToInt32(this.companiesGridView.CurrentRow.Cells[0].Value);
-                    selectedCompany = dbContext.Companies.Where(x => x.CompanyID == companyToEdit).SingleOrDefault();
+                    Company selectedCompany;
+                    using (CompanyContext dbContext = new CompanyContext())
+                    {
+                        var companyToEdit = Convert.ToInt32(this.companiesGridView.CurrentRow.Cells[0].Value);
+                        selectedCompany = dbContext.Companies.Where(x => x.CompanyID == companyToEdit).SingleOrDefault();
 
+                    }
+
+                    EditCompanyForm editCompanyForm = new EditCompanyForm(this, selectedCompany);
+                    editCompanyForm.ShowDialog();
                 }
-                
-                EditCompanyForm editCompanyForm = new EditCompanyForm(this, selectedCompany);
-                editCompanyForm.ShowDialog();
+                else return;
             }
             else if(mainTabControl.SelectedTab.Name == "EmployesPage")
             {
-                Employe selectedEmploye;
-                using (CompanyContext dbContext = new CompanyContext()) 
+                if (this.employesGridView.CurrentRow != null)
                 {
-
-                    if (this.employesGridView.CurrentRow.Cells[0].Value != null)
+                    Employe selectedEmploye;
+                    using (CompanyContext dbContext = new CompanyContext())
                     {
-                        var employeToEdit = Convert.ToInt32(this.employesGridView.CurrentRow.Cells[0].Value);
-                        selectedEmploye = dbContext.Employes.Where(x => x.EmployeID == employeToEdit).SingleOrDefault();
+
+                        
+                            var employeToEdit = Convert.ToInt32(this.employesGridView.CurrentRow.Cells[0].Value);
+                            selectedEmploye = dbContext.Employes.Where(x => x.EmployeID == employeToEdit).SingleOrDefault();
+                        
+                        
                     }
-                    else return;
+                    EditEmployeForm editEmployeForm = new EditEmployeForm(this, selectedEmploye);
+                    editEmployeForm.ShowDialog();
                 }
-                EditEmployeForm editEmployeForm = new EditEmployeForm(this, selectedEmploye);
-                editEmployeForm.ShowDialog();
+                else return;
             }
         }
       
@@ -208,27 +215,36 @@ namespace POTZProjektZaliczeniowy
         {
             if (mainTabControl.SelectedTab.Name == "CompaniesPage")
             {
-                Company selectedCompany;
-                using (CompanyContext dbContext = new CompanyContext())
+                if (this.companiesGridView.CurrentRow != null)
                 {
-                    var companyToEdit = Convert.ToInt32(this.companiesGridView.CurrentRow.Cells[0].Value);
-                    selectedCompany = dbContext.Companies.Where(x => x.CompanyID == companyToEdit).SingleOrDefault();
-                    dbContext.Companies.Remove(selectedCompany);
-                 dbContext.SaveChanges();
-                 RefreshCompanyGridView();
+                    Company selectedCompany;
+                    using (CompanyContext dbContext = new CompanyContext())
+                    {
+                        var companyToEdit = Convert.ToInt32(this.companiesGridView.CurrentRow.Cells[0].Value);
+                        selectedCompany = dbContext.Companies.Where(x => x.CompanyID == companyToEdit).SingleOrDefault();
+                        dbContext.Companies.Remove(selectedCompany);
+                        dbContext.SaveChanges();
+                        RefreshCompanyGridView();
+                    }
                 }
+                else return;
             }
             else if (mainTabControl.SelectedTab.Name == "EmployesPage")
             {
-                Employe selectedEmploye;
-                using (CompanyContext dbContext = new CompanyContext())
+                if (this.employesGridView.CurrentRow != null)
                 {
-                    var employeToEdit = Convert.ToInt32(this.employesGridView.CurrentRow.Cells[0].Value);
-                    selectedEmploye = dbContext.Employes.Where(x => x.EmployeID == employeToEdit).SingleOrDefault();
-                    dbContext.Employes.Remove(selectedEmploye);
-                    dbContext.SaveChanges();
+                    Employe selectedEmploye;
+                    using (CompanyContext dbContext = new CompanyContext())
+                    {
+                        var employeToEdit = Convert.ToInt32(this.employesGridView.CurrentRow.Cells[0].Value);
+                        selectedEmploye = dbContext.Employes.Where(x => x.EmployeID == employeToEdit).SingleOrDefault();
+                        dbContext.Employes.Remove(selectedEmploye);
+                        dbContext.SaveChanges();
+                        RefreshEmployeGridView();
+                    }
+                   
                 }
-                RefreshEmployeGridView();
+                else return;
             }
         }
 
