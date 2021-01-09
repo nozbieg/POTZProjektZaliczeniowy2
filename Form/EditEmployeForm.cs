@@ -113,7 +113,7 @@ namespace POTZProjektZaliczeniowy.Form
         {
            
                 DeleteEmploye(editedEmploye);
-                mainForm.RefreshCompanyGridView();
+                mainForm.RefreshEmployeGridView();
                 this.Close();
             
         }
