@@ -42,29 +42,30 @@
             // CompanyIndex
             // 
             this.CompanyIndex.AutoSize = true;
-            this.CompanyIndex.Location = new System.Drawing.Point(15, 14);
+            this.CompanyIndex.Location = new System.Drawing.Point(34, 14);
             this.CompanyIndex.Name = "CompanyIndex";
-            this.CompanyIndex.Size = new System.Drawing.Size(88, 15);
+            this.CompanyIndex.Size = new System.Drawing.Size(73, 15);
             this.CompanyIndex.TabIndex = 0;
-            this.CompanyIndex.Text = "CompanyIndex";
+            this.CompanyIndex.Text = "Company ID";
             // 
             // CompanyName
             // 
             this.CompanyName.AutoSize = true;
             this.CompanyName.Location = new System.Drawing.Point(15, 41);
             this.CompanyName.Name = "CompanyName";
-            this.CompanyName.Size = new System.Drawing.Size(91, 15);
+            this.CompanyName.Size = new System.Drawing.Size(92, 15);
             this.CompanyName.TabIndex = 1;
-            this.CompanyName.Text = "CompanyName";
+            this.CompanyName.Text = "Company name";
             // 
             // CompanyNIP
             // 
             this.CompanyNIP.AutoSize = true;
-            this.CompanyNIP.Location = new System.Drawing.Point(15, 70);
+            this.CompanyNIP.Location = new System.Drawing.Point(27, 70);
             this.CompanyNIP.Name = "CompanyNIP";
-            this.CompanyNIP.Size = new System.Drawing.Size(78, 15);
+            this.CompanyNIP.Size = new System.Drawing.Size(81, 15);
             this.CompanyNIP.TabIndex = 2;
-            this.CompanyNIP.Text = "CompanyNIP";
+            this.CompanyNIP.Text = "Company NIP";
+            this.CompanyNIP.Click += new System.EventHandler(this.CompanyNIP_Click);
             // 
             // txtBoxCompanyId
             // 
@@ -90,31 +91,31 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(18, 111);
+            this.btnSave.Location = new System.Drawing.Point(18, 96);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "btnSave";
+            this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(180, 111);
+            this.btnCancel.Location = new System.Drawing.Point(180, 96);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 5;
-            this.btnCancel.Text = "btnCancel";
+            this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(99, 111);
+            this.btnDelete.Location = new System.Drawing.Point(99, 96);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 6;
-            this.btnDelete.Text = "btnDelete";
+            this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -122,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(271, 148);
+            this.ClientSize = new System.Drawing.Size(271, 127);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);

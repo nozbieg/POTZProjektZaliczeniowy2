@@ -81,7 +81,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 147);
+            this.label5.Location = new System.Drawing.Point(12, 138);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 15);
             this.label5.TabIndex = 4;
@@ -110,28 +110,28 @@
             // 
             // btnAddEmploye
             // 
-            this.btnAddEmploye.Location = new System.Drawing.Point(13, 201);
+            this.btnAddEmploye.Location = new System.Drawing.Point(90, 164);
             this.btnAddEmploye.Name = "btnAddEmploye";
             this.btnAddEmploye.Size = new System.Drawing.Size(75, 23);
             this.btnAddEmploye.TabIndex = 8;
-            this.btnAddEmploye.Text = "btnAddEmploye";
+            this.btnAddEmploye.Text = "Add";
             this.btnAddEmploye.UseVisualStyleBackColor = true;
             this.btnAddEmploye.Click += new System.EventHandler(this.btnAddEmploye_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(94, 201);
+            this.btnClose.Location = new System.Drawing.Point(170, 164);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 9;
-            this.btnClose.Text = "btnClose";
+            this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // comboBoxCompany
             // 
             this.comboBoxCompany.FormattingEnabled = true;
-            this.comboBoxCompany.Location = new System.Drawing.Point(90, 144);
+            this.comboBoxCompany.Location = new System.Drawing.Point(90, 135);
             this.comboBoxCompany.Name = "comboBoxCompany";
             this.comboBoxCompany.Size = new System.Drawing.Size(155, 23);
             this.comboBoxCompany.TabIndex = 10;
@@ -140,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 250);
+            this.ClientSize = new System.Drawing.Size(262, 196);
             this.Controls.Add(this.comboBoxCompany);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAddEmploye);

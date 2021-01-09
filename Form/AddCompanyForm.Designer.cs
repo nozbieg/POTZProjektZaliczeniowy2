@@ -41,14 +41,14 @@
             this.CompanyName.AutoSize = true;
             this.CompanyName.Location = new System.Drawing.Point(12, 21);
             this.CompanyName.Name = "CompanyName";
-            this.CompanyName.Size = new System.Drawing.Size(91, 15);
+            this.CompanyName.Size = new System.Drawing.Size(92, 15);
             this.CompanyName.TabIndex = 0;
-            this.CompanyName.Text = "CompanyName";
+            this.CompanyName.Text = "Company name";
             // 
             // NIP
             // 
             this.NIP.AutoSize = true;
-            this.NIP.Location = new System.Drawing.Point(12, 63);
+            this.NIP.Location = new System.Drawing.Point(77, 50);
             this.NIP.Name = "NIP";
             this.NIP.Size = new System.Drawing.Size(26, 15);
             this.NIP.TabIndex = 1;
@@ -63,28 +63,28 @@
             // 
             // txtBoxNIP
             // 
-            this.txtBoxNIP.Location = new System.Drawing.Point(119, 55);
+            this.txtBoxNIP.Location = new System.Drawing.Point(119, 47);
             this.txtBoxNIP.Name = "txtBoxNIP";
             this.txtBoxNIP.Size = new System.Drawing.Size(100, 23);
             this.txtBoxNIP.TabIndex = 3;
             // 
             // btnAddCompany
             // 
-            this.btnAddCompany.Location = new System.Drawing.Point(12, 106);
+            this.btnAddCompany.Location = new System.Drawing.Point(63, 76);
             this.btnAddCompany.Name = "btnAddCompany";
             this.btnAddCompany.Size = new System.Drawing.Size(75, 23);
             this.btnAddCompany.TabIndex = 4;
-            this.btnAddCompany.Text = "btnAddCompany";
+            this.btnAddCompany.Text = "Add";
             this.btnAddCompany.UseVisualStyleBackColor = true;
             this.btnAddCompany.Click += new System.EventHandler(this.btnAddCompany_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(93, 106);
+            this.btnClose.Location = new System.Drawing.Point(144, 76);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 5;
-            this.btnClose.Text = "btnClose";
+            this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -92,7 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(240, 144);
+            this.ClientSize = new System.Drawing.Size(240, 108);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAddCompany);
             this.Controls.Add(this.txtBoxNIP);

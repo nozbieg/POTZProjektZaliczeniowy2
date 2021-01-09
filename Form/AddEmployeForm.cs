@@ -46,18 +46,32 @@ namespace POTZProjektZaliczeniowy.Form
 
                 if (comboBoxCompany.SelectedItem != null)
                 {
-
-                    var asignedCompany = (from comp in dbContext.Companies where comp.CompanyID == company.CompanyID select comp).ToList();
-                    Employe employe = new Employe()
+                    if (company.CompanyName != null)
                     {
-                        FristName = firstName,
-                        LastName = lastName,
-                        Email = email,
-                        Company = asignedCompany[0]
-                    };
-                    dbContext.Employes.Add(employe);
+                        var asignedCompany = (from comp in dbContext.Companies where comp.CompanyID == company.CompanyID select comp).ToList();
+
+                        Employe employe = new Employe()
+                        {
+                            FristName = firstName,
+                            LastName = lastName,
+                            Email = email,
+                            Company = asignedCompany[0]
+                        };
+                        dbContext.Employes.Add(employe);
+                    }
+                    else
+                    {
+                        Employe employe = new Employe()
+                        {
+                            FristName = firstName,
+                            LastName = lastName,
+                            Email = email,
+                            Company = null
+                        };
+                        dbContext.Employes.Add(employe);
+                    }
                 }
-                else
+                else if(comboBoxCompany.SelectedItem == null)
                 {
                     Employe employe = new Employe()
                     {
@@ -83,7 +97,10 @@ namespace POTZProjektZaliczeniowy.Form
         {
             using (var dbContext = new CompanyContext())
             {
-                List<Company> company = dbContext.Companies.ToList();
+                var emptyCompany = new Company();
+                List<Company> company= new List<Company>();
+                company.Add(emptyCompany);
+                company.AddRange(dbContext.Companies.ToList());
                 comboBoxCompany.DataSource = company;
                 comboBoxCompany.ValueMember = "CompanyId";
                 comboBoxCompany.DisplayMember = "CompanyName";

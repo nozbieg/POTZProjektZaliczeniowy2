@@ -188,10 +188,15 @@ namespace POTZProjektZaliczeniowy
             else if(mainTabControl.SelectedTab.Name == "EmployesPage")
             {
                 Employe selectedEmploye;
-                using (CompanyContext dbContext = new CompanyContext()) {
-                    var employeToEdit = Convert.ToInt32(this.employesGridView.CurrentRow.Cells[0].Value);
-                    selectedEmploye = dbContext.Employes.Where(x => x.EmployeID == employeToEdit).SingleOrDefault();
-                   
+                using (CompanyContext dbContext = new CompanyContext()) 
+                {
+
+                    if (this.employesGridView.CurrentRow.Cells[0].Value != null)
+                    {
+                        var employeToEdit = Convert.ToInt32(this.employesGridView.CurrentRow.Cells[0].Value);
+                        selectedEmploye = dbContext.Employes.Where(x => x.EmployeID == employeToEdit).SingleOrDefault();
+                    }
+                    else return;
                 }
                 EditEmployeForm editEmployeForm = new EditEmployeForm(this, selectedEmploye);
                 editEmployeForm.ShowDialog();

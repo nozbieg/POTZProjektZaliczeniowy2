@@ -30,21 +30,26 @@ namespace POTZProjektZaliczeniowy.Form
             txtBoxEmployeFirstName.Text = employe.FristName;
             txtBoxEmployeLastName.Text = employe.LastName;
             txtBoxEmployeEmail.Text = employe.Email;
-            if (employe.Company != null)
+            if (employe.CompanyID != null)
             {
-                comboBoxEmployeCompany.SelectedItem = employe.Company;
-
-            }else if(employe.Company == null)
-            {
-                comboBoxEmployeCompany.SelectedItem = null;
+                var findedCompany = FindCompany(employe);
+                comboBoxEmployeCompany.SelectedIndex = comboBoxEmployeCompany.FindStringExact(findedCompany.CompanyName);
+              
             }
-
+            else
+            {
+                comboBoxEmployeCompany.Text = null;
+            }
+             
         }
         void FillComboBoxData()
         {
             using (var dbContext = new CompanyContext())
-            {           
-                List<Company> company = dbContext.Companies.ToList();
+            {
+                var emptyCompany = new Company();
+                List<Company> company = new List<Company>();
+                company.Add(emptyCompany);
+                company.AddRange(dbContext.Companies.ToList());
                 comboBoxEmployeCompany.DataSource = company;
                 comboBoxEmployeCompany.ValueMember = "CompanyID";
                 comboBoxEmployeCompany.DisplayMember = "CompanyName";
@@ -59,8 +64,27 @@ namespace POTZProjektZaliczeniowy.Form
                 employe.FristName = txtBoxEmployeFirstName.Text;
                 employe.LastName = txtBoxEmployeLastName.Text;
                 employe.Email = txtBoxEmployeEmail.Text;
-                employe.Company = (Company)comboBoxEmployeCompany.SelectedItem;
-                dbcontext.Employes.Update(employe);
+                var selectedCompany = (Company)comboBoxEmployeCompany.SelectedItem;
+                var findedCompany = FindCompany(selectedCompany);
+                if (findedCompany != null)
+                {
+                    if (findedCompany.CompanyName != null)
+                    {
+                        employe.Company = findedCompany;
+                        employe.CompanyID = findedCompany.CompanyID;
+                    }
+                    else if (selectedCompany.CompanyName == null)
+                    {
+                        employe.Company = null;
+                        employe.CompanyID = null;
+                    }
+                }
+                else
+                {
+                    employe.Company = null;
+                    employe.CompanyID = null;
+                }
+                dbcontext.Employes.Update(employe);              
                 dbcontext.SaveChanges();
             }
         }
@@ -81,6 +105,58 @@ namespace POTZProjektZaliczeniowy.Form
             this.Close();
         }
 
-       
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+           
+                DeleteEmploye(editedEmploye);
+                mainForm.RefreshCompanyGridView();
+                this.Close();
+            
+        }
+
+        private void DeleteEmploye(Employe employe)
+        {
+            using (CompanyContext dbcontext = new CompanyContext())
+            {
+
+                dbcontext.Employes.Remove(employe);
+                dbcontext.SaveChanges();
+            }
+        }
+
+        private void comboBoxEmployeCompany_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditEmployeForm_Load(object sender, EventArgs e)
+        {
+
+        }
+        private Company FindCompany(Employe employe)
+        {
+            if (employe.CompanyID != null)
+            {
+                using (var dbContext = new CompanyContext())
+                {
+                    var findedCompany = dbContext.Companies.Where(c => c.CompanyID == employe.CompanyID).FirstOrDefault();
+                    return findedCompany;
+                }
+            }
+            else return null;
+        }
+
+        private Company FindCompany(Company company)
+        {
+            if (company.CompanyID != null)
+            {
+                using (var dbContext = new CompanyContext())
+                {
+                    var findedCompany = dbContext.Companies.Where(c => c.CompanyID == company.CompanyID).FirstOrDefault();
+                    return findedCompany;
+                }
+            }
+            else return null;
+        }
     }
 }

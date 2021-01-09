@@ -65,5 +65,10 @@ namespace POTZProjektZaliczeniowy.Form
             mainForm.RefreshCompanyGridView();
             this.Close();
         }
+
+        private void CompanyNIP_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
