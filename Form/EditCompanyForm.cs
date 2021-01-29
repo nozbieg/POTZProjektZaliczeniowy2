@@ -14,7 +14,7 @@ namespace POTZProjektZaliczeniowy.Form
     {
         MainForm mainForm;
         Company editedCompany;
-        
+
         public EditCompanyForm(MainForm mainForm, Company company)
         {
             this.mainForm = mainForm;
@@ -42,7 +42,7 @@ namespace POTZProjektZaliczeniowy.Form
         {
             using (CompanyContext dbcontext = new CompanyContext())
             {
-               
+
                 dbcontext.Companies.Remove(company);
                 dbcontext.SaveChanges();
             }

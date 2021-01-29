@@ -18,7 +18,7 @@ namespace POTZProjektZaliczeniowy.Form
             this.mainForm = mainForm;
             InitializeComponent();
         }
-       
+
 
         private void btnClose_Click(object sender, EventArgs e)
         {

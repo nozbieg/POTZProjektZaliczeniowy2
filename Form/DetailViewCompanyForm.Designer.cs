@@ -68,15 +68,15 @@
             this.ListViewEmployesOfCompany.HideSelection = false;
             this.ListViewEmployesOfCompany.Location = new System.Drawing.Point(12, 59);
             this.ListViewEmployesOfCompany.Name = "ListViewEmployesOfCompany";
-            this.ListViewEmployesOfCompany.Size = new System.Drawing.Size(378, 284);
+            this.ListViewEmployesOfCompany.Size = new System.Drawing.Size(378, 267);
             this.ListViewEmployesOfCompany.TabIndex = 2;
             this.ListViewEmployesOfCompany.UseCompatibleStateImageBehavior = false;
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(315, 349);
+            this.btnClose.Location = new System.Drawing.Point(281, 332);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(109, 40);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -84,21 +84,21 @@
             // 
             // btnDeleteEmploye
             // 
-            this.btnDeleteEmploye.Location = new System.Drawing.Point(234, 349);
+            this.btnDeleteEmploye.Location = new System.Drawing.Point(147, 332);
             this.btnDeleteEmploye.Name = "btnDeleteEmploye";
-            this.btnDeleteEmploye.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteEmploye.Size = new System.Drawing.Size(128, 40);
             this.btnDeleteEmploye.TabIndex = 3;
-            this.btnDeleteEmploye.Text = "Delete Employee";
+            this.btnDeleteEmploye.Text = "Delete";
             this.btnDeleteEmploye.UseVisualStyleBackColor = true;
             this.btnDeleteEmploye.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAddEmploye
             // 
-            this.btnAddEmploye.Location = new System.Drawing.Point(153, 349);
+            this.btnAddEmploye.Location = new System.Drawing.Point(12, 332);
             this.btnAddEmploye.Name = "btnAddEmploye";
-            this.btnAddEmploye.Size = new System.Drawing.Size(75, 23);
+            this.btnAddEmploye.Size = new System.Drawing.Size(129, 40);
             this.btnAddEmploye.TabIndex = 4;
-            this.btnAddEmploye.Text = "Add new Employe";
+            this.btnAddEmploye.Text = "Add new";
             this.btnAddEmploye.UseVisualStyleBackColor = true;
             this.btnAddEmploye.Click += new System.EventHandler(this.btnAddEmploye_Click);
             // 

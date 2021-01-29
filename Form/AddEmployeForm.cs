@@ -19,7 +19,7 @@ namespace POTZProjektZaliczeniowy.Form
             this.mainForm = mainForm;
             InitializeComponent();
         }
-       
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -40,7 +40,7 @@ namespace POTZProjektZaliczeniowy.Form
 
         private void AddEmloyeToDatabase(string firstName, string lastName, string email, Company company)
         {
-            
+
             using (var dbContext = new CompanyContext())
             {
 
@@ -71,7 +71,7 @@ namespace POTZProjektZaliczeniowy.Form
                         dbContext.Employes.Add(employe);
                     }
                 }
-                else if(comboBoxCompany.SelectedItem == null)
+                else if (comboBoxCompany.SelectedItem == null)
                 {
                     Employe employe = new Employe()
                     {
@@ -82,10 +82,10 @@ namespace POTZProjektZaliczeniowy.Form
                     };
                     dbContext.Employes.Add(employe);
                 }
-                
+
                 dbContext.SaveChanges();
             }
-            
+
         }
 
         private void AddEmployeForm_Load(object sender, EventArgs e)
@@ -98,7 +98,7 @@ namespace POTZProjektZaliczeniowy.Form
             using (var dbContext = new CompanyContext())
             {
                 var emptyCompany = new Company();
-                List<Company> company= new List<Company>();
+                List<Company> company = new List<Company>();
                 company.Add(emptyCompany);
                 company.AddRange(dbContext.Companies.ToList());
                 comboBoxCompany.DataSource = company;

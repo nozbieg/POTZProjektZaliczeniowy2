@@ -110,9 +110,9 @@
             // 
             // btnAddEmploye
             // 
-            this.btnAddEmploye.Location = new System.Drawing.Point(90, 164);
+            this.btnAddEmploye.Location = new System.Drawing.Point(13, 164);
             this.btnAddEmploye.Name = "btnAddEmploye";
-            this.btnAddEmploye.Size = new System.Drawing.Size(75, 23);
+            this.btnAddEmploye.Size = new System.Drawing.Size(104, 36);
             this.btnAddEmploye.TabIndex = 8;
             this.btnAddEmploye.Text = "Add";
             this.btnAddEmploye.UseVisualStyleBackColor = true;
@@ -120,9 +120,9 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(170, 164);
+            this.btnClose.Location = new System.Drawing.Point(123, 164);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(122, 36);
             this.btnClose.TabIndex = 9;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -140,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(262, 196);
+            this.ClientSize = new System.Drawing.Size(262, 212);
             this.Controls.Add(this.comboBoxCompany);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAddEmploye);

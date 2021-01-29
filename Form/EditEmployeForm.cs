@@ -22,7 +22,7 @@ namespace POTZProjektZaliczeniowy.Form
             InitializeComponent();
             FillComboBoxData();
             FillemployeData(editedEmploye);
-            
+
         }
         void FillemployeData(Employe employe)
         {
@@ -34,13 +34,13 @@ namespace POTZProjektZaliczeniowy.Form
             {
                 var findedCompany = FindCompany(employe);
                 comboBoxEmployeCompany.SelectedIndex = comboBoxEmployeCompany.FindStringExact(findedCompany.CompanyName);
-              
+
             }
             else
             {
                 comboBoxEmployeCompany.Text = null;
             }
-             
+
         }
         void FillComboBoxData()
         {
@@ -57,7 +57,7 @@ namespace POTZProjektZaliczeniowy.Form
         }
         private void EditEmploye(Employe employe)
         {
-           
+
 
             using (CompanyContext dbcontext = new CompanyContext())
             {
@@ -88,7 +88,7 @@ namespace POTZProjektZaliczeniowy.Form
                     employe.Company = null;
                     employe.CompanyID = null;
                 }
-                dbcontext.Employes.Update(employe);              
+                dbcontext.Employes.Update(employe);
                 dbcontext.SaveChanges();
             }
         }
@@ -111,11 +111,11 @@ namespace POTZProjektZaliczeniowy.Form
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-           
-                DeleteEmploye(editedEmploye);
-                mainForm.RefreshEmployeGridView();
-                this.Close();
-            
+
+            DeleteEmploye(editedEmploye);
+            mainForm.RefreshEmployeGridView();
+            this.Close();
+
         }
 
         private void DeleteEmploye(Employe employe)
@@ -152,7 +152,7 @@ namespace POTZProjektZaliczeniowy.Form
 
         private Company FindCompany(Company company)
         {
-            if (company != null) 
+            if (company != null)
             {
                 if (company.CompanyID != null)
                 {

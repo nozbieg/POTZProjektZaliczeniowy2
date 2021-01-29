@@ -70,9 +70,9 @@
             // 
             // btnAddCompany
             // 
-            this.btnAddCompany.Location = new System.Drawing.Point(63, 76);
+            this.btnAddCompany.Location = new System.Drawing.Point(12, 76);
             this.btnAddCompany.Name = "btnAddCompany";
-            this.btnAddCompany.Size = new System.Drawing.Size(75, 23);
+            this.btnAddCompany.Size = new System.Drawing.Size(92, 34);
             this.btnAddCompany.TabIndex = 4;
             this.btnAddCompany.Text = "Add";
             this.btnAddCompany.UseVisualStyleBackColor = true;
@@ -80,9 +80,9 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(144, 76);
+            this.btnClose.Location = new System.Drawing.Point(119, 76);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(100, 34);
             this.btnClose.TabIndex = 5;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(240, 108);
+            this.ClientSize = new System.Drawing.Size(240, 122);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAddCompany);
             this.Controls.Add(this.txtBoxNIP);

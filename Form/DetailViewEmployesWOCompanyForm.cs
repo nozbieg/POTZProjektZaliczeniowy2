@@ -14,7 +14,7 @@ namespace POTZProjektZaliczeniowy.Form
 {
     public partial class DetailViewEmployesWOCompanyForm : System.Windows.Forms.Form
     {
-        
+
         DetailViewCompanyForm detailViewCompanyForm;
         Company company;
         public DetailViewEmployesWOCompanyForm(DetailViewCompanyForm detailViewCompanyForm, Company company)
@@ -38,14 +38,14 @@ namespace POTZProjektZaliczeniowy.Form
                                                               .ToList();
 
                 foreach (var item in employeList)
-                {                 
-                        if (item != null)
-                        {
-                            string[] row = { item.EmployeID.ToString(), item.FristName, item.LastName, item.Email };
-                            var listItem = new ListViewItem(row);
-                            ListViewEmployeesWOCompany.Items.Add(listItem);
-                        }
-                    
+                {
+                    if (item != null)
+                    {
+                        string[] row = { item.EmployeID.ToString(), item.FristName, item.LastName, item.Email };
+                        var listItem = new ListViewItem(row);
+                        ListViewEmployeesWOCompany.Items.Add(listItem);
+                    }
+
                 }
             }
             ListViewEmployeesWOCompany.Refresh();
@@ -73,21 +73,21 @@ namespace POTZProjektZaliczeniowy.Form
             {
                 Name = "EmployeEmail",
                 Text = "Employe Email"
-            });           
+            });
             ListViewEmployeesWOCompany.View = View.Details;
 
-            ListViewEmployeesWOCompany.Columns[0].Text = "Employe ID";                                 
-            ListViewEmployeesWOCompany.Columns[1].Text = "Employe FirstName";                          
-            ListViewEmployeesWOCompany.Columns[2].Text = "Employe LastName";                           
-            ListViewEmployeesWOCompany.Columns[3].Text = "Employe Email";                              
-            ListViewEmployeesWOCompany.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);   
-            ListViewEmployeesWOCompany.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);      
+            ListViewEmployeesWOCompany.Columns[0].Text = "Employe ID";
+            ListViewEmployeesWOCompany.Columns[1].Text = "Employe FirstName";
+            ListViewEmployeesWOCompany.Columns[2].Text = "Employe LastName";
+            ListViewEmployeesWOCompany.Columns[3].Text = "Employe Email";
+            ListViewEmployeesWOCompany.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            ListViewEmployeesWOCompany.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             ListViewEmployeesWOCompany.Refresh();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            
+
             this.Close();
         }
 

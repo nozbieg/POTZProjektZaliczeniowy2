@@ -82,7 +82,7 @@ namespace POTZProjektZaliczeniowy.Form
                     }
                 }
             }
-           
+
         }
         private void CreateListAndColumns()
         {

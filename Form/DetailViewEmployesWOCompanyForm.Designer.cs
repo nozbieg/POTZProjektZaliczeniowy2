@@ -39,7 +39,7 @@
             this.ListViewEmployeesWOCompany.HideSelection = false;
             this.ListViewEmployeesWOCompany.Location = new System.Drawing.Point(12, 42);
             this.ListViewEmployeesWOCompany.Name = "ListViewEmployeesWOCompany";
-            this.ListViewEmployeesWOCompany.Size = new System.Drawing.Size(301, 221);
+            this.ListViewEmployeesWOCompany.Size = new System.Drawing.Size(301, 206);
             this.ListViewEmployeesWOCompany.TabIndex = 0;
             this.ListViewEmployeesWOCompany.UseCompatibleStateImageBehavior = false;
             // 
@@ -54,9 +54,9 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(238, 269);
+            this.btnClose.Location = new System.Drawing.Point(180, 254);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(133, 38);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -64,11 +64,11 @@
             // 
             // btnAddSelected
             // 
-            this.btnAddSelected.Location = new System.Drawing.Point(157, 269);
+            this.btnAddSelected.Location = new System.Drawing.Point(12, 254);
             this.btnAddSelected.Name = "btnAddSelected";
-            this.btnAddSelected.Size = new System.Drawing.Size(75, 23);
+            this.btnAddSelected.Size = new System.Drawing.Size(162, 38);
             this.btnAddSelected.TabIndex = 3;
-            this.btnAddSelected.Text = "Add selected employes";
+            this.btnAddSelected.Text = "Add";
             this.btnAddSelected.UseVisualStyleBackColor = true;
             this.btnAddSelected.Click += new System.EventHandler(this.btnAddSelected_Click);
             // 

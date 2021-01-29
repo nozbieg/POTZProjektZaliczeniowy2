@@ -63,7 +63,7 @@
             this.btnAddEmploye.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddEmploye.Location = new System.Drawing.Point(12, 532);
             this.btnAddEmploye.Name = "btnAddEmploye";
-            this.btnAddEmploye.Size = new System.Drawing.Size(93, 23);
+            this.btnAddEmploye.Size = new System.Drawing.Size(126, 42);
             this.btnAddEmploye.TabIndex = 0;
             this.btnAddEmploye.Text = "Add Employee";
             this.btnAddEmploye.UseCompatibleTextRendering = true;
@@ -73,10 +73,10 @@
             // btnAddCompany
             // 
             this.btnAddCompany.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddCompany.Location = new System.Drawing.Point(111, 532);
+            this.btnAddCompany.Location = new System.Drawing.Point(144, 532);
             this.btnAddCompany.Name = "btnAddCompany";
             this.btnAddCompany.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAddCompany.Size = new System.Drawing.Size(84, 23);
+            this.btnAddCompany.Size = new System.Drawing.Size(136, 42);
             this.btnAddCompany.TabIndex = 1;
             this.btnAddCompany.Text = "Add Company";
             this.btnAddCompany.UseCompatibleTextRendering = true;
@@ -144,9 +144,9 @@
             // 
             // txtBoxSearchFieldCompany
             // 
-            this.txtBoxSearchFieldCompany.Location = new System.Drawing.Point(129, 22);
+            this.txtBoxSearchFieldCompany.Location = new System.Drawing.Point(184, 22);
             this.txtBoxSearchFieldCompany.Name = "txtBoxSearchFieldCompany";
-            this.txtBoxSearchFieldCompany.Size = new System.Drawing.Size(545, 23);
+            this.txtBoxSearchFieldCompany.Size = new System.Drawing.Size(448, 23);
             this.txtBoxSearchFieldCompany.TabIndex = 1;
             this.txtBoxSearchFieldCompany.TextChanged += new System.EventHandler(this.txtBoxSearchFieldCompany_TextChanged);
             // 
@@ -161,9 +161,9 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(683, 21);
+            this.btnRefresh.Location = new System.Drawing.Point(638, 21);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(111, 23);
+            this.btnRefresh.Size = new System.Drawing.Size(156, 23);
             this.btnRefresh.TabIndex = 3;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -215,9 +215,9 @@
             // 
             // btnRefreshEmployes
             // 
-            this.btnRefreshEmployes.Location = new System.Drawing.Point(677, 25);
+            this.btnRefreshEmployes.Location = new System.Drawing.Point(645, 25);
             this.btnRefreshEmployes.Name = "btnRefreshEmployes";
-            this.btnRefreshEmployes.Size = new System.Drawing.Size(111, 23);
+            this.btnRefreshEmployes.Size = new System.Drawing.Size(143, 23);
             this.btnRefreshEmployes.TabIndex = 3;
             this.btnRefreshEmployes.Text = "Refresh";
             this.btnRefreshEmployes.UseVisualStyleBackColor = true;
@@ -235,17 +235,17 @@
             // 
             // txtBoxSearchField
             // 
-            this.txtBoxSearchField.Location = new System.Drawing.Point(128, 25);
+            this.txtBoxSearchField.Location = new System.Drawing.Point(191, 25);
             this.txtBoxSearchField.Name = "txtBoxSearchField";
-            this.txtBoxSearchField.Size = new System.Drawing.Size(543, 23);
+            this.txtBoxSearchField.Size = new System.Drawing.Size(448, 23);
             this.txtBoxSearchField.TabIndex = 0;
             this.txtBoxSearchField.TextChanged += new System.EventHandler(this.txtBoxSearchField_TextChanged);
             // 
             // btnEditRecord
             // 
-            this.btnEditRecord.Location = new System.Drawing.Point(201, 532);
+            this.btnEditRecord.Location = new System.Drawing.Point(286, 532);
             this.btnEditRecord.Name = "btnEditRecord";
-            this.btnEditRecord.Size = new System.Drawing.Size(75, 23);
+            this.btnEditRecord.Size = new System.Drawing.Size(134, 42);
             this.btnEditRecord.TabIndex = 4;
             this.btnEditRecord.Text = "Edit Record";
             this.btnEditRecord.UseVisualStyleBackColor = true;
@@ -253,9 +253,9 @@
             // 
             // btnDeleteRecord
             // 
-            this.btnDeleteRecord.Location = new System.Drawing.Point(282, 532);
+            this.btnDeleteRecord.Location = new System.Drawing.Point(426, 532);
             this.btnDeleteRecord.Name = "btnDeleteRecord";
-            this.btnDeleteRecord.Size = new System.Drawing.Size(87, 23);
+            this.btnDeleteRecord.Size = new System.Drawing.Size(143, 42);
             this.btnDeleteRecord.TabIndex = 5;
             this.btnDeleteRecord.Text = "Delete record";
             this.btnDeleteRecord.UseCompatibleTextRendering = true;
@@ -266,7 +266,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 567);
+            this.ClientSize = new System.Drawing.Size(848, 586);
             this.Controls.Add(this.btnDeleteRecord);
             this.Controls.Add(this.btnEditRecord);
             this.Controls.Add(this.mainTabControl);
